@@ -10,9 +10,15 @@ The numbers obtained should be printed in a comma-separated sequence on a single
 
 """
 
-
-
+#本人答案
 for i in range(2000, 3201):
         if i % 7 == 0 and i % 5 != 0:
             print(i, end=',')
-            
+
+#参考答案
+l=[]
+for i in range(2000, 3201):
+    if (i%7==0) and (i%5!=0):
+        l.append(str(i))
+print (','.join(l))
+         

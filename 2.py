@@ -16,9 +16,20 @@ Then, the output should be:
 40320
 
 """
-
+# 本人答案
 num=1
 n=int(input("请输入一个数字："))
 for i in range(1,n+1):
     num=num*i
 print(num)
+
+
+# 参考答案
+def fact(x):
+    if x == 0:
+        return 1
+    return x * fact(x - 1)
+
+
+x=int(input())
+print(fact(x))
