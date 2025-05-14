@@ -5,8 +5,8 @@ A small file containing some beginner friendly questions for Python.
 题目出处为https://github.com/zhiwehu/Python-programming-exercises
 The source of the title is https://github.com/zhiwehu/Python-programming-exercises
 
-原参考答案的所有raw_input(),在本题中全部更换为input()
-All raw_input() in the original reference answer have been replaced with input() in this question
+原参考答案使用python2，本人将其进行修改使其可以使用python3运行
+The original reference answer used Python 2, but I have modified it to run using Python 3
 
 本人发言先中后英，原作者发言先英后中以示区分。
 To distinguish between us,I will write in Chinese first and then in English, while the original author will write in English first and then in Chinese.
