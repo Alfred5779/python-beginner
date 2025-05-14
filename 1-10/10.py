@@ -39,11 +39,13 @@ print (" ".join(sorted(list(set(words)))))
 """
 sorted会创造一个新的列表,并返回一个新的列表,而不是在原地排序
 sort在原来的列表进行排序,并返回None
+
 Sorted will create a new list and return a new list instead of sorting in place
 Sort sorts the original list and returns None
 
 sorted可对任何可以排序的数据结构进行排序,包括列表、元组、字符串等
 sort只能对列表进行排序
+
 Sorted can sort any data structure that can be sorted, including lists, tuples, strings, etc
 Sort can only sort a list
 """
