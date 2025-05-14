@@ -163,50 +163,28 @@ Level 1
 
 Question:
 问题：
+
 Define a class which has at least two methods:
 定义一个至少有两个方法的类：
+
 getString: to get a string from console input
-getString：从控制台输入中获取字符串
+getString:从控制台输入中获取字符串
+
 printString: to print the string in upper case.
-printString：打印大写字符串。
+printString:打印大写字符串。
+
 Also please include simple test function to test the class methods.
 另外，请包含简单的测试函数来测试类方法。
 
 Hints:
 提示：
+
 Use __init__ method to construct some parameters
 使用__init__方法构造一些参数
 
-Solution:
-解决方案：
-class InputOutString(object):
-类InputOutString（对象）：
-def __init__(self):
-def __init__（self）：
-self.s = ""
-self.s=“”
-
-def getString(self):
-def getString（self）：
-self.s = raw_input()
-self.s=raw_input（）
-
-def printString(self):
-def printString（self）：
-print self.s.upper()
-打印self.s.upper（）
-
-strObj = InputOutString()
-strObj=InputOutString（）
-strObj.getString()
-strObj.getString（）
-strObj.printString()
-strObj.printString（）
 #----------------------------------------#
 #----------------------------------------#
 
-#----------------------------------------#
-#----------------------------------------#
 Question 6
 问题6
 Level 2
@@ -214,111 +192,76 @@ Level 2
 
 Question:
 问题：
+
 Write a program that calculates and prints the value according to the given formula:
 编写一个程序，根据给定的公式计算并打印值：
+
 Q = Square root of [(2 * C * D)/H]
-Q=[（2*C*D）/H]的平方根
+Q=[(2*C*D)/H]**0.5
+
 Following are the fixed values of C and H:
-以下是C和H的固定值：
+以下是C和H的固定值,
+
 C is 50. H is 30.
 C是50。H是30。
+
 D is the variable whose values should be input to your program in a comma-separated sequence.
-D是变量，其值应以逗号分隔的顺序输入到程序中。
+D是变量,其值应以逗号分隔的顺序输入到程序中。
+
 Example
 例子
+
 Let us assume the following comma separated input sequence is given to the program:
 让我们假设程序有以下逗号分隔的输入序列：
+
 100,150,180
-100,150,180
+
 The output of the program should be:
 程序的输出应该是：
-18,22,24
+
 18,22,24
 
 Hints:
 提示：
 If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, it should be printed as 26)
-如果接收到的输出是十进制形式的，则应四舍五入到最接近的值（例如，如果收到的输出是26.0，则应打印为26）
+如果接收到的输出是十进制形式的,则应四舍五入到最接近的值(例如,如果收到的输出是26.0,则应打印为26)
+
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-#!/usr/bin/env python
-#！/usr/bin/env python
-import math
-导入数学
-c=50
-c=50
-h=30
-h=30
-value = []
-值=[]
-items=[x for x in raw_input().split(',')]
-items=[x表示raw_input（）中的x。split（'，'）]
-for d in items:
-对于项目中的d：
-value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
-value.apappend（str（int（round）（math.sqrt（2*c*float（d）/h））））
-
-print ','.join(value)
-print'，'.join（值）
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
 Question 7
 问题7
+
 Level 2
 2级
 
 Question:
 问题：
+
 Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
-编写一个程序，以2位数字X、Y为输入，生成一个二维数组。数组第i行和第j列中的元素值应为i*j。
-Note: i=0,1.., X-1; j=0,1,¡­Y-1.
-注：i=0.1...，X-1；j=0.1，…Y-1。
+编写一个程序,以2位数字X、Y为输入,生成一个二维数组。数组第i行和第j列中的元素值应为i*j。
+
 Example
 例子
+
 Suppose the following inputs are given to the program:
 假设程序有以下输入：
+
 3,5
-3,5
+
 Then, the output of the program should be:
 那么，程序的输出应该是：
+
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
-[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+
 
 Hints:
 提示：
+
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 注意：如果向问题提供输入数据，则应假设它是逗号分隔形式的控制台输入。
-
-Solution:
-解决方案：
-input_str = raw_input()
-input_str=原始输入（）
-dimensions=[int(x) for x in input_str.split(',')]
-dimensions=[int（x）for input_str.split（'，'）中的x]
-rowNum=dimensions[0]
-rowNum=维度[0]
-colNum=dimensions[1]
-colNum=尺寸[1]
-multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
-multilist=[[0表示范围内的列（colNum）]表示范围内行（rowNum）]
-
-for row in range(rowNum):
-对于范围内的行（rowNum）：
-for col in range(colNum):
-对于范围内的col（colNum）：
-multilist[row][col]= row*col
-多列表[row][col]=行*col
-
-print multilist
-打印多列表
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -329,32 +272,21 @@ Level 2
 
 Question:
 问题：
+
 Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
 编写一个程序，接受逗号分隔的单词序列作为输入，并在按字母顺序排序后以逗号分隔的顺序打印单词。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 without,hello,bag,world
-没有，你好，包，世界
+
+
 Then, the output should be:
 那么，输出应该是：
+
 bag,hello,without,world
-包，你好，没有，世界
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-items=[x for x in raw_input().split(',')]
-items=[x表示raw_input（）中的x。split（'，'）]
-items.sort()
-items.sort（）
-print ','.join(items)
-打印'，'.join（项目）
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -367,47 +299,19 @@ Question£º
 问题：
 Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 编写一个程序，接受行序列作为输入，并在将句子中的所有字符大写后打印行。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 Hello world
-你好，世界
 Practice makes perfect
-熟能生巧
+
 Then, the output should be:
 那么，输出应该是：
+
 HELLO WORLD
-程序
 PRACTICE MAKES PERFECT
-熟能生巧
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-lines = []
-行=[]
-while True:
-虽然为True：
-s = raw_input()
-s=原始输入（）
-if s:
-如果s：
-lines.append(s.upper())
-lines.append（s.upper（））
-else:
-其他：
-break;
-断裂；
-
-for sentence in lines:
-对于行中的句子：
-print sentence
-打印句子
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -419,33 +323,28 @@ Level 2
 Question:
 问题：
 Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
-编写一个程序，接受一系列空格分隔的单词作为输入，并在删除所有重复单词并按字母数字排序后打印单词。
+编写一个程序,接受一系列空格分隔的单词作为输入,并在删除所有重复单词并按字典序排序后打印单词。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 hello world and practice makes perfect and hello world again
 你好世界，熟能生巧，再次你好世界
+
 Then, the output should be:
-那么，输出应该是：
+那么,输出应该是：
+
 again and hello makes perfect practice world
-再次，hello创造了完美的实践世界
+再次,hello创造了完美的实践世界
 
 Hints:
 提示：
+
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
-We use set container to remove duplicated data automatically and then use sorted() to sort the data.
-我们使用set容器自动删除重复的数据，然后使用sorted（）对数据进行排序。
 
-Solution:
-解决方案：
-s = raw_input()
-s=原始输入（）
-words = [word for word in s.split(" ")]
-words=[在s.split（“”）中逐字逐句]
-print " ".join(sorted(list(set(words))))
-打印“”.连接（排序（列表（集合（单词）））
-#----------------------------------------#
-#----------------------------------------#
+We use set container to remove duplicated data automatically and then use sorted() to sort the data.
+我们使用set容器自动删除重复的数据,然后使用sorted()对数据进行排序。
 
 #----------------------------------------#
 #----------------------------------------#
@@ -454,82 +353,48 @@ Question 11
 Level 2
 2级
 
-Question:
-问题：
 Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
-编写一个程序，接受逗号分隔的4位二进制数序列作为输入，然后检查它们是否能被5整除。可被5整除的数字将以逗号分隔的顺序打印。
+编写一个程序,接受逗号分隔的4位二进制数序列作为输入,然后检查它们是否能被5整除。可被5整除的数字将以逗号分隔的顺序打印。
+
 Example:
 例子：
+
 0100,0011,1010,1001
-0100,0011,1010,1001
+
 Then the output should be:
 那么输出应该是：
+
 1010
-1010
+
 Notes: Assume the data is input by console.
 注：假设数据是通过控制台输入的。
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-value = []
-值=[]
-items=[x for x in raw_input().split(',')]
-items=[x表示raw_input（）中的x。split（'，'）]
-for p in items:
-对于项目中的p：
-intp = int(p, 2)
-intp=int（p，2）
-if not intp%5:
-如果不是intp%5：
-value.append(p)
-value.append（p）
-
-print ','.join(value)
-print'，'.join（值）
 #----------------------------------------#
 #----------------------------------------#
 
-#----------------------------------------#
-#----------------------------------------#
 Question 12
 问题12
-Level 2
+
+Leve2
 2级
 
 Question:
 问题：
+
 Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.
-编写一个程序，它将找到1000到3000之间的所有这些数字（都包括在内），这样每个数字都是偶数。
+编写一个程序,它将找到1000到3000之间的所有的每一位都是偶数的数字(包括1000和3000)。
+
 The numbers obtained should be printed in a comma-separated sequence on a single line.
 获得的数字应以逗号分隔的顺序打印在一行上。
 
 Hints:
 提示：
+
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
 
-Solution:
-解决方案：
-values = []
-值=[]
-for i in range(1000, 3001):
-对于范围（10003001）内的i：
-s = str(i)
-s=str（i）
-if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
-如果（int（s[0]）%2==0）和（int（s]）%2==0）以及（int（s[2]）%2==.0）和（int[3]）%2==0）：
-values.append(s)
-values.append
-print ",".join(values)
-打印“，”.join（值）
-#----------------------------------------#
-#----------------------------------------#
-
+说实话我认为这应该是一道一级的题目
+To be honest, I think this should be a first level question
 #----------------------------------------#
 #----------------------------------------#
 Question 13
@@ -539,50 +404,20 @@ Level 2
 
 Question:
 问题：
-Write a program that accepts a sentence and calculate the number of letters and digits.
+
+write a program that accepts a sentence and calculate the number of letters and digits.
 编写一个程序，接受一个句子并计算字母和数字的数量。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 hello world! 123
-你好，世界！ 123
+
 Then, the output should be:
 那么，输出应该是：
+
 LETTERS 10
-字母10
 DIGITS 3
-数字3
-
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-s = raw_input()
-s=原始输入（）
-d={"DIGITS":0, "LETTERS":0}
-d={“数字”：0，“字母”：0}
-for c in s:
-对于s中的c：
-if c.isdigit():
-如果c.isdigit（）：
-d["DIGITS"]+=1
-d[“数字”]+=1
-elif c.isalpha():
-elif c.isalpha（）：
-d["LETTERS"]+=1
-d[“字母”]+=1
-else:
-其他：
-pass
-通过
-print "LETTERS", d["LETTERS"]
-打印“字母”，d[“字母”]
-print "DIGITS", d["DIGITS"]
-打印“数字”，d[“数字”]
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -593,50 +428,20 @@ Level 2
 
 Question:
 问题：
+
 Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
 编写一个程序，接受一个句子并计算大写字母和小写字母的数量。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 Hello world!
-你好，世界！
+
 Then, the output should be:
 那么，输出应该是：
+
 UPPER CASE 1
-上壳体1
 LOWER CASE 9
-小写9
-
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-s = raw_input()
-s=原始输入（）
-d={"UPPER CASE":0, "LOWER CASE":0}
-d={“大写”：0，“小写”：0}
-for c in s:
-对于s中的c：
-if c.isupper():
-如果c.isupper（）：
-d["UPPER CASE"]+=1
-d[“上壳体”]+=1
-elif c.islower():
-elif c.islower（）：
-d["LOWER CASE"]+=1
-d[“小写”]+=1
-else:
-其他：
-pass
-通过
-print "UPPER CASE", d["UPPER CASE"]
-打印“上箱”，d[“上箱“]
-print "LOWER CASE", d["LOWER CASE"]
-打印“下箱”，d[“下箱“]
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -647,38 +452,19 @@ Level 2
 
 Question:
 问题：
+
 Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
-编写一个程序，用给定的数字作为a的值来计算a+aa+aaa+aaa的值。
+编写一个程序,用给定的数字作为a的值来计算a+aa+aaa+aaaa的值。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 9
-9
+
 Then, the output should be:
 那么，输出应该是：
-11106
-11106
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-a = raw_input()
-a=原始输入（）
-n1 = int( "%s" % a )
-n1=int（“%s”%a）
-n2 = int( "%s%s" % (a,a) )
-n2=int（“%s%s”%（a，a））
-n3 = int( "%s%s%s" % (a,a,a) )
-n3=int（“%s%s%s”%（a，a，a））
-n4 = int( "%s%s%s%s" % (a,a,a,a) )
-n4=int（“%s%s%s%s”%（a，a，a））
-print n1+n2+n3+n4
-打印n1+n2+n3+n4
-#----------------------------------------#
-#----------------------------------------#
+11106
 
 #----------------------------------------#
 #----------------------------------------#
@@ -689,30 +475,23 @@ Level 2
 
 Question:
 问题：
+
 Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
-使用列表理解法将列表中的每个奇数平方。列表由逗号分隔的数字序列输入。
+使用列表推导式法将列表中的每个奇数平方。列表由逗号分隔的数字序列输入。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
+
 1,2,3,4,5,6,7,8,9
-1,2,3,4,5,6,7,8,9
+
 Then, the output should be:
 那么，输出应该是：
-1,3,5,7,9
+
 1,3,5,7,9
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
+我的老师告诉我使用列表推导式或许可以使代码变得更加简洁,但是一个好的代码追求的应该让人可以读得懂,而不是最少的行数。
+My teacher told me that using list dcomprehension may make the code more concise, but good code should strive for readability, not the minimum number of lines.
 
-Solution:
-解决方案：
-values = raw_input()
-values=raw_input（）
-numbers = [x for x in values.split(",") if int(x)%2!=0]
-numbers=[x表示值中的x。如果int（x）%2！=0]，则使用split（“，”）
-print ",".join(numbers)
-打印“，”.join（数字）
 #----------------------------------------#
 #----------------------------------------#
 
@@ -723,69 +502,29 @@ Level 2
 
 Question:
 问题：
+
 Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
 编写一个程序，根据控制台输入的交易日志计算银行账户的净额。交易日志格式如下：
-D 100
+
 D 100
 W 200
-W 200
+
 
 D means deposit while W means withdrawal.
-D表示存款，W表示取款。
+D表示存款,W表示取款。
+
 Suppose the following input is supplied to the program:
 假设向程序提供了以下输入：
-D 300
-D 300
+
 D 300
 D 300
 W 200
-W 200
 D 100
-D 100
+
 Then, the output should be:
 那么，输出应该是：
-500
-500
 
-Hints:
-提示：
-In case of input data being supplied to the question, it should be assumed to be a console input.
-如果输入数据被提供给问题，则应假设它是控制台输入。
-
-Solution:
-解决方案：
-netAmount = 0
-净金额=0
-while True:
-虽然为True：
-s = raw_input()
-s=原始输入（）
-if not s:
-如果不是s：
-break
-打破
-values = s.split(" ")
-值=s.split（“”）
-operation = values[0]
-操作=值[0]
-amount = int(values[1])
-amount=int（值[1]）
-if operation=="D":
-如果操作==“D”：
-netAmount+=amount
-净额+=金额
-elif operation=="W":
-elif操作==“W”：
-netAmount-=amount
-净额-=金额
-else:
-其他：
-pass
-通过
-print netAmount
-打印净额
-#----------------------------------------#
-#----------------------------------------#
+500
 
 #----------------------------------------#
 #----------------------------------------#
