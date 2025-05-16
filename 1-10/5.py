@@ -19,7 +19,6 @@ Use __init__ method to construct some parameters
 
 """
 
-#本人答案
 class stringa:
     def __init__(self):
         self.str1= ""
@@ -33,20 +32,3 @@ class stringa:
 s=stringa()
 s.getstring()
 s.printstring()
-
-#参考答案
-
-class InputOutString(object):
-
-    def __init__(self):
-        self.s = ""
-
-    def getString(self):
-        self.s = input()
-
-    def printString(self):
-        print(self.s.upper())
-
-strObj = InputOutString()
-strObj.getString()
-strObj.printString()

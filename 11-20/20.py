@@ -13,15 +13,3 @@ class task():
 num=int(input())
 task1=task()
 task1.find(num)
-
-#参考答案
-def putNumbers(n):
-    i = 0
-    while i<n:
-        j=i
-        i=i+1
-    if j%7==0:
-        yield j
-
-for i in putNumbers(100):
-    print (i)

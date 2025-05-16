@@ -35,7 +35,7 @@ If the output received is in decimal form, it should be rounded off to its neare
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
 """
-#本人答案
+
 def task(d):
     c=50
     h=30
@@ -45,14 +45,3 @@ def task(d):
 a=list((input("输入数字").split(",")))
 for i in a:
     print(task(int(i)),end=",")
-
-#参考答案
-import math
-c=50
-h=30
-value = []
-items=[x for x in input().split(',')]
-for d in items:
-    value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
-
-print (','.join(value))

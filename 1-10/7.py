@@ -17,7 +17,6 @@ Then, the output of the program should be:
 
 """
 
-#本人答案
 a,b=map(int,input("a,b=").split(','))
 c=[]
 for i in range(a):
@@ -26,16 +25,3 @@ for i in range(a):
         d.append(i*j)
     c.append(d)        
 print(c)
-
-#参考答案
-input_str = input()
-dimensions=[int(x) for x in input_str.split(',')]
-rowNum=dimensions[0]
-colNum=dimensions[1]
-multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
-
-for row in range(rowNum):
-    for col in range(colNum):
-        multilist[row][col]= row*col
-
-print (multilist)

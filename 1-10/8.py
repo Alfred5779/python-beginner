@@ -15,12 +15,6 @@ bag,hello,without,world
 
 """
 
-#本人答案
 str_list=input("输入单词序列(Input word sequence):").split(',')
 str_list.sort()
 print(','.join(str_list))
-
-#参考答案
-items=[x for x in input().split(',')]
-items.sort()
-print (','.join(items))

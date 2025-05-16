@@ -16,7 +16,6 @@ PRACTICE MAKES PERFECT
 
 """
 
-#本人答案
 a=[]
 while 1==1:
     s=input()
@@ -26,15 +25,3 @@ while 1==1:
         break
 for k in a:
     print(k)
-
-#参考答案
-lines = []
-while True:
-    s = input()
-    if s:
-        lines.append(s.upper())
-    else:
-        break
-
-for sentence in lines:
-    print (sentence)

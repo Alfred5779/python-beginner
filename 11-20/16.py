@@ -16,20 +16,15 @@ Then, the output should be:
 My teacher told me that using list dcomprehension may make the code more concise, but good code should strive for readability, not the minimum number of lines.
 """
 
-#本人的答案（使用列表推导式）
+#使用列表推导式
 a = [i for i in input().split(',') if int(i) % 2 != 0]
 print(','.join(a))
 
 
-#本人的答案（不使用列表推导式）
+#不使用列表推导式
 a=input().split(',')
 b=[]
 for i in a:
     if int(i)%2!=0:
         b.append(i)
 print(','.join(b))
-
-#参考答案
-values = input()
-numbers = [x for x in values.split(",") if int(x)%2!=0]
-print (",".join(numbers))

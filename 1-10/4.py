@@ -15,16 +15,7 @@ Then, the output should be:
 
 """
 
-#本人答案
 a=input()
 b=tuple(a.split (','))
 c=a.split(',')
 print(b,c)
-
-
-#参考答案
-values=input()
-l=values.split(",")
-t=tuple(l)
-print(l)
-print(t)

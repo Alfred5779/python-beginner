@@ -24,17 +24,9 @@ We use set container to remove duplicated data automatically and then use sorted
 我们使用set容器自动删除重复的数据,然后使用sorted()对数据进行排序。
 """
 
-#本人答案
 a=list(set(input().split(" ")))
 a.sort()
 print(' '.join(a))
-
-# 参考答案
-s = input()
-words = [word for word in s.split(" ")]
-print (" ".join(sorted(list(set(words)))))
-
-
 
 """
 sorted会创造一个新的列表,并返回一个新的列表,而不是在原地排序

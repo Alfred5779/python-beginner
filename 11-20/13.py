@@ -14,7 +14,6 @@ LETTERS 10
 DIGITS 3
 """
 
-#本人答案
 str1=input()
 a={'LETTERS':0 ,'DIGITS':0}
 for i in str1:
@@ -24,16 +23,3 @@ for i in str1:
         a['DIGITS']+=1
 print('LETTERS',a['LETTERS'])
 print('DIGITS',a['DIGITS'])
-
-#参考答案
-s = input()
-d={"DIGITS":0, "LETTERS":0}
-for c in s:
-    if c.isdigit():
-        d["DIGITS"]+=1
-    elif c.isalpha():
-        d["LETTERS"]+=1
-    else:
-        pass
-print ("LETTERS", d["LETTERS"])
-print ("DIGITS", d["DIGITS"])

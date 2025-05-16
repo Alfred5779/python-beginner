@@ -15,7 +15,6 @@ LOWER CASE 9
 
 """
 
-#本人答案
 str1=input("")
 a={'UPPER CASE':0 ,'LOWER CASE':0}
 for i in str1:
@@ -25,16 +24,3 @@ for i in str1:
         a['LOWER CASE']+=1
 print('UPPER CASE',a['UPPER CASE'])
 print('LOWER CASE',a['LOWER CASE'])
-
-#参考答案
-s = input()
-d={"UPPER CASE":0, "LOWER CASE":0}
-for c in s:
-    if c.isupper():
-        d["UPPER CASE"]+=1
-    elif c.islower():
-        d["LOWER CASE"]+=1
-    else:
-        pass
-print ("UPPER CASE", d["UPPER CASE"])
-print ("LOWER CASE", d["LOWER CASE"])

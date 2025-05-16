@@ -17,7 +17,6 @@ Notes: Assume the data is input by console.
 
 """
 
-#本人答案
 a=input().split(",")
 c=[]
 for i in a:
@@ -25,13 +24,3 @@ for i in a:
     if b%5==0:
         c.append(i)
 print(','.join(c))
-
-#参考答案
-value = []
-items=[x for x in input().split(',')]
-for p in items:
-    intp = int(p, 2)
-    if not intp%5:
-        value.append(p)
-
-print (','.join(value))

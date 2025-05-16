@@ -45,17 +45,3 @@ while True:
     list1.append(tup)
 list1.sort(key=lambda x: (x[0], int(x[1]),int(x[2])))
 print(list1)
-
-#参考答案
-
-from operator import itemgetter, attrgetter
-
-l = []
-
-while True:
-    s = input()
-    if not s:
-        break
-    l.append(tuple(s.split(",")))
-
-print (sorted(l, key=itemgetter(0,1,2)))

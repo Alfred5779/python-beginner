@@ -23,7 +23,7 @@ Then, the output should be:
 
 500
 """
-#本人答案
+
 money=0
 while True:
     s=input()
@@ -37,21 +37,3 @@ while True:
     else:
         break
 print(money)
-
-#参考答案
-netAmount = 0
-while True:
-    s = input()
-    if not s:
-        break
-    values = s.split(" ")
-    operation = values[0]
-    amount = int(values[1])
-    if operation=="D":
-        netAmount+=amount
-    elif operation=="W":
-        netAmount-=amount
-    else:
-        pass
-
-print (netAmount)
