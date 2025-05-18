@@ -1157,12 +1157,19 @@ level 1
 Question:
 问题：
 Write a method which can calculate square value of number
-写一个可以计算数字平方值的方法
+写一个可以计算数字平方值的函数
 
 Hints:
 提示：
 Using the ** operator
 使用**运算符
+
+# Solution:
+def squre():
+    num=int(input("Enter a number: "))
+    return num**2
+
+print(squre())
 
 Solution:
 def square(num):
@@ -1195,6 +1202,19 @@ Hints:
 提示：
 The built-in document method is __doc__
 内置的document方法是__doc__
+
+#本人答案
+help(abs)
+help(int)
+help(input)
+
+def square(num):
+    '''返回输入数字的平方值。
+    
+    输入数字必须是整数。
+    '''
+    return num ** 2
+
 
 Solution:
 print abs.__doc__
@@ -1234,6 +1254,19 @@ Define a instance parameter, need add it in __init__ method
 You can init a object with construct parameter or set the value later
 您可以使用构造参数初始化对象，也可以稍后设置值
 
+#本人答案
+class task ():
+    name = " JACK"
+    def __init__(self, name,):
+        self.name = name
+
+
+person1=task("JACK")
+print(person1.name)
+
+person2=task("MIKE")
+print(person2.name)
+
 Solution:
 class Person:
     # Define the class parameter "name"
@@ -1263,6 +1296,12 @@ Hints:
 Define a function with two numbers as arguments. You can compute the sum in the function and return the value.
 定义一个以两个数字为参数的函数。您可以在函数中计算总和并返回值。
 
+#本人答案
+def task(a,b):
+    return a + b
+
+print(task(1,4))
+
 Solution
 def SumFunction(number1, number2):
 	return number1+number2
@@ -1283,26 +1322,12 @@ Hints:
 Use str() to convert a number to string.
 使用str（）将数字转换为字符串。
 
-Solution
-def printValue(n):
-	print str(n)
+#本人答案
+def task(n):
+    return str(n)
 
-printValue(3)
-
-
-#----------------------------------------#
-#----------------------------------------#
-Question 28:
-问题：
-
-Define a function that can convert a integer into a string and print it in console.
-定义一个可以将整数转换为字符串并在控制台中打印的函数。
-
-Hints:
-提示：
-
-Use str() to convert a number to string.
-使用str（）将数字转换为字符串。
+n=1234
+print(task(n))
 
 Solution
 def printValue(n):
@@ -1322,6 +1347,12 @@ Hints:
 
 Use int() to convert a string to integer.
 使用int（）将字符串转换为整数。
+
+#本人答案
+def task(s1,s2):
+    return int(s1) + int(s2)
+
+print(task("123","456"))
 
 Solution
 def printValue(s1,s2):
@@ -1344,6 +1375,13 @@ Hints:
 Use + to concatenate the strings
 使用+连接字符串
 
+#本人答案
+def task(str1, str2):
+    return str1 + str2
+str1 = "Hello "
+str2 = "World!"
+print(task(str1, str2))
+
 Solution
 def printValue(s1,s2):
 	print s1+s2
@@ -1362,6 +1400,19 @@ Hints:
 
 Use len() function to get the length of a string
 使用len（）函数获取字符串的长度
+
+#本人答案
+def task(str1, str2):
+    if len(str1) > len(str2):
+        return str1
+    elif len(str1) < len(str2):
+        return str2
+    else:
+        return str1 + "\n" + str2
+    
+str1 = "Hello"
+str2 = "World!"
+print(task(str1, str2))
 
 Solution
 def printValue(s1,s2):
@@ -1393,6 +1444,16 @@ Hints:
 Use % operator to check if a number is even or odd.
 使用%运算符检查数字是偶数还是奇数。
 
+#本人答案
+def task(num):
+    if num % 2 == 0:
+        return "It is an even number\n这是偶数"
+    else:
+        return "It is an odd number\n这是奇数"
+    
+num = 10
+print(task(num))
+
 Solution
 def checkValue(n):
 	if n%2 == 0:
@@ -1421,6 +1482,14 @@ Use dict[key]=value pattern to put entry into a dictionary.
 
 Use ** operator to get power of a number.
 使用**运算符获取数字的幂。
+
+# 本人答案
+def task():
+    dict1 = {}
+    for i in range(1, 4):
+        dict1[i] = i ** 2
+    return dict1
+print(task())
 
 Solution
 def printDict():
@@ -1451,6 +1520,14 @@ Use ** operator to get power of a number.
 Use range() for loops.
 对循环使用range（）。
 
+#本人答案
+def print_square_dict():
+    square_dict = {i: i**2 for i in range(1, 21)}
+    for key, value in square_dict.items():
+        print(f"{key}: {value}")
+
+print_square_dict()
+
 Solution
 def printDict():
 	d=dict()
@@ -1461,17 +1538,12 @@ def printDict():
 
 printDict()
 
-
-
 #----------------------------------------#
 #----------------------------------------#
-2.10
-2.10
-
-Question 35:
+Question 34:
 问题：
 Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the values only.
-定义一个函数，该函数可以生成一个字典，其中键是1到20之间的数字（都包括在内），值是键的平方。该函数应该只打印值。
+定义一个函数,该函数可以生成一个字典,其中键是1到20之间的数字(都包括在内),值是键的平方。该函数应该只打印值。
 
 Hints:
 提示：
@@ -1485,16 +1557,21 @@ Use ** operator to get power of a number.
 Use range() for loops.
 对循环使用range（）。
 
-Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
-使用keys（）迭代字典中的键。我们还可以使用item（）来获取键/值对。
+# 本人答案
+def task():
+    dict1 = {}
+    for i in range(1, 21):
+        dict1[i] = i ** 2
+    for value in dict1.values():
+        print(value)
 
 Solution
 def printDict():
 	d=dict()
 	for i in range(1,21):
 		d[i]=i**2
-	for (k,v) in d.items():	
-		print v
+	for k in d.value():	
+		print k
 		
 
 printDict()
@@ -1519,6 +1596,14 @@ Use range() for loops.
 
 Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
 使用keys（）迭代字典中的键。我们还可以使用item（）来获取键/值对。
+
+# 本人答案
+def task():
+    dict1 = {}
+    for i in range(1, 21):
+        dict1[i] = i ** 2
+    for key in dict1.keys():
+        print(key)
 
 Solution
 def printDict():
@@ -1551,6 +1636,13 @@ Use range() for loops.
 Use list.append() to add values into a list.
 使用list.append（）将值添加到列表中。
 
+# 本人答案
+def task():
+    list1 = []
+    for i in range(1, 21):
+        list1.append(i ** 2)
+    print(list1)
+
 Solution
 def printList():
 	li=list()
@@ -1579,6 +1671,13 @@ Use list.append() to add values into a list.
 使用list.append（）将值添加到列表中。
 Use [n1:n2] to slice a list
 使用[n1:n2]对列表进行切片
+
+# 本人答案
+def task():
+    list1 = []
+    for i in range(1, 21):
+        list1.append(i ** 2)
+    print(list1[:5])
 
 Solution
 def printList():
@@ -1613,6 +1712,13 @@ Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
 使用[n1:n2]对列表进行切片
 
+# 本人答案
+def task():
+    list1 = []
+    for i in range(1, 21):
+        list1.append(i ** 2)
+    print(list1[-5:])
+
 Solution
 def printList():
 	li=list()
@@ -1644,6 +1750,13 @@ Use list.append() to add values into a list.
 
 Use [n1:n2] to slice a list
 使用[n1:n2]对列表进行切片
+
+# 本人答案
+def task():
+    list1 = []
+    for i in range(1, 21):
+        list1.append(i ** 2)
+    print(list1[5:])
 
 Solution
 def printList():
@@ -1678,6 +1791,11 @@ Use list.append() to add values into a list.
 Use tuple() to get a tuple from a list.
 使用tuple（）从列表中获取元组。
 
+# 本人答案
+def task():
+    tuple1 = tuple(i ** 2 for i in range(1, 21))
+    print(tuple1)
+
 Solution
 def printTuple():
 	li=list()
@@ -1700,6 +1818,12 @@ Hints:
 Use [n1:n2] notation to get a slice from a tuple.
 使用[n1:n2]表示法从元组中获取切片。
 
+# 本人答案
+def task():
+    tuple1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    print(tuple1[:5])
+    print(tuple1[5:]) 
+    S
 Solution
 tp=(1,2,3,4,5,6,7,8,9,10)
 tp1=tp[:5]
@@ -1722,6 +1846,12 @@ Use "for" to iterate the tuple
 
 Use tuple() to generate a tuple from a list.
 使用tuple（）从列表生成元组。
+
+# 本人答案
+def task():
+    tuple1 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    tuple2 = tuple(i for i in tuple1 if i % 2 == 0)
+    print(tuple2)
 
 Solution
 tp=(1,2,3,4,5,6,7,8,9,10)
@@ -1749,6 +1879,14 @@ Hints:
 Use if statement to judge condition.
 使用if语句判断条件。
 
+# 本人答案
+def task():
+    string = input("请输入一个字符串: ")
+    if string in ["yes", "YES", "Yes"]:
+        print("Yes")
+    else:
+        print("No")
+
 Solution
 s= raw_input()
 if s=="yes" or s=="YES" or s=="Yes":
@@ -1771,6 +1909,12 @@ Use filter() to filter some elements in a list.
 Use lambda to define anonymous functions.
 使用lambda定义匿名函数。
 
+# 本人答案
+def task():
+    list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list2 = list(filter(lambda x: x % 2 == 0, list1))
+    print(list2)
+
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = filter(lambda x: x%2==0, li)
@@ -1792,6 +1936,12 @@ Use map() to generate a list.
 
 Use lambda to define anonymous functions.
 使用lambda定义匿名函数。
+
+# 本人答案
+def task():
+    list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list2 = list(map(lambda x: x ** 2, list1))
+    print(list2)
 
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
@@ -1816,6 +1966,12 @@ Use filter() to filter elements of a list.
 Use lambda to define anonymous functions.
 使用lambda定义匿名函数。
 
+# 本人答案
+def task():
+    list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list2 = list(map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, list1)))
+    print(list2)
+
 Solution
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, li))
@@ -1836,6 +1992,13 @@ Use filter() to filter elements of a list.
 
 Use lambda to define anonymous functions.
 使用lambda定义匿名函数。
+
+# 本人答案
+def task():
+    list1 = range(1, 21)
+    list2 = list(filter(lambda x: x % 2 == 0, list1))
+    print(list2)
+task()
 
 Solution
 evenNumbers = filter(lambda x: x%2==0, range(1,21))
@@ -1858,6 +2021,13 @@ Use map() to generate a list.
 Use lambda to define anonymous functions.
 使用lambda定义匿名函数。
 
+# 本人答案
+def task():
+    list1 = range(1, 21)
+    list2 = list(map(lambda x: x ** 2, list1))
+    print(list2)
+task()
+
 Solution
 squaredNumbers = map(lambda x: x**2, range(1,21))
 print squaredNumbers
@@ -1875,6 +2045,16 @@ Hints:
 
 Use @staticmethod decorator to define class static method.
 使用@staticmethod装饰器定义类静态方法。
+
+#本人答案
+class American:
+    @staticmethod
+    def printNationality():
+        print("American")
+
+anAmerican = American()
+anAmerican.printNationality()
+American.printNationality()
 
 Solution
 class American(object):
@@ -1901,6 +2081,17 @@ Hints:
 Use class Subclass(ParentClass) to define a subclass.
 使用类子类（ParentClass）定义子类。
 
+#本人答案
+class American:
+    @staticmethod
+    def printNationality():
+        print("American")
+
+class NewYorker(American):
+    @staticmethod
+    def printNationality():
+        print("New Yorker")
+
 Solution:
 
 class American(object):
@@ -1917,11 +2108,6 @@ print aNewYorker
 
 #----------------------------------------#
 #----------------------------------------#
-
-
-7.2
-7.2
-
 Question 52:
 问题：
 Define a class named Circle which can be constructed by a radius. The Circle class has a method which can compute the area.
@@ -1932,6 +2118,14 @@ Hints:
 
 Use def methodName(self) to define a method.
 使用def methodName（self）定义方法。
+
+#本人答案
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def compute_area(self):
+        return 3.14 * self.radius ** 2
 
 Solution:
 
@@ -1950,13 +2144,22 @@ print aCircle.area()
 Question 53:
 
 Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area.
-定义一个名为Rectangle的类，它可以由长度和宽度构造。Rectangle类有一个可以计算面积的方法。
+定义一个名为Rectangle的类,它可以由长度和宽度构造。Rectangle类有一个可以计算面积的方法。
 
 Hints:
 提示：
 
 Use def methodName(self) to define a method.
 使用def methodName（self）定义方法。
+
+#本人答案
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def compute_area(self):
+        return self.length * self.width
 
 Solution:
 
@@ -1984,6 +2187,16 @@ Hints:
 
 To override a method in super class, we can define a method with the same name in the super class.
 要覆盖超类中的方法，我们可以在超类中定义一个同名方法。
+
+# #本人答案
+class Shape:
+    def area(self):
+        return 0
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+    def area(self):
+        return self.length ** 2
 
 Solution:
 
@@ -2018,6 +2231,9 @@ Hints:
 Use raise() to raise an exception.
 使用raise（）引发异常。
 
+#本人答案
+raise RuntimeError("This is a runtime error.")
+
 Solution:
 
 raise RuntimeError('something wrong')
@@ -2037,6 +2253,14 @@ Hints:
 
 Use try/except to catch exceptions.
 使用try/except来捕获异常。
+
+#本人答案
+def compute_division():
+    try:
+        result = 5 / 0
+    except ZeroDivisionError as e:
+        print(f"Error: {e}")
+compute_division()
 
 Solution:
 
@@ -2066,6 +2290,12 @@ Hints:
 
 To define a custom exception, we need to define a class inherited from Exception.
 要定义自定义异常，我们需要定义一个从exception继承的类。
+
+#本人答案
+class CustomException(Exception):
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
 
 Solution:
 
@@ -2109,6 +2339,13 @@ Hints:
 
 Use \w to match letters.
 使用\w匹配字母。
+
+def get_username(email):
+    try:
+        username = email.split('@')[0]
+        return username
+    except IndexError:
+        return "Invalid email format"
 
 Solution:
 import re
@@ -2172,7 +2409,7 @@ If the following words is given as input to the program:
 
 Then, the output of the program should be:
 那么，程序的输出应该是：
-
+2 3
 
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
@@ -2182,6 +2419,12 @@ Hints:
 
 Use re.findall() to find all substring using regex.
 使用re.findall（）使用正则表达式查找所有子字符串。
+
+#本人答案
+input_str = input("请输入由空格分隔的单词序列：")
+words = input_str.split()
+result = [word for word in words if word.isdigit()]
+print(" ".join(result))
 
 Solution:
 import re
@@ -2215,11 +2458,10 @@ print unicodeString
 #----------------------------------------#
 Question 62:
 
-Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
-编写一个程序来读取ASCII字符串并将其转换为utf-8编码的unicode字符串。
-
 此为python2的内容，在python3中不出现
 This is content from Python 2 and does not appear in Python 3
+Write a program to read an ASCII string and to convert it to a unicode string encoded by utf-8.
+编写一个程序来读取ASCII字符串并将其转换为utf-8编码的unicode字符串。
 
 Hints:
 提示：
@@ -2283,6 +2525,16 @@ Hints:
 Use float() to convert an integer to a float
 使用float（）将整数转换为浮点数
 
+# 本人答案
+def compute_sum(n):
+    total = 0
+    for i in range(1, n + 1):
+        total += i / (i + 1)
+    return total
+
+n= int(input("请输入一个正整数n: "))
+result = compute_sum(n)
+
 Solution:
 
 n=int(raw_input())
@@ -2325,6 +2577,13 @@ Hints:
 提示：
 We can define recursive function in Python.
 我们可以在Python中定义递归函数。
+
+# 本人答案
+def compute_f(n):
+    if n == 0:
+        return 0
+    else:
+        return compute_f(n - 1) + 100
 
 Solution:
 
@@ -2377,6 +2636,18 @@ Hints:
 We can define recursive function in Python.
 我们可以在Python中定义递归函数。
 
+# 本人答案
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input("请输入一个非负整数n: "))
+result = fibonacci(n)
+print(f"f({n}) = {result}")
 
 Solution:
 
@@ -2387,10 +2658,6 @@ def f(n):
 
 n=int(raw_input())
 print f(n)
-
-
-#----------------------------------------#
-#----------------------------------------#
 
 #----------------------------------------#
 #----------------------------------------#
@@ -2433,6 +2700,17 @@ Use string.join() to join a list of strings.
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
 
+# 本人答案
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+n = int(input("请输入一个整数: "))
+fibonacci_list = [str(fibonacci(i)) for i in range(n + 1)]
+
 Solution:
 
 def f(n):
@@ -2473,6 +2751,15 @@ Use yield to produce the next value in generator.
 
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
+
+#本人答案
+def even_numbers(n):
+    for i in range(0, n + 1, 2):
+        yield i
+n = int(input("请输入一个整数: "))
+even_numbers_list = [str(num) for num in even_numbers(n)]
+print(",".join(even_numbers_list))
+
 
 Solution:
 
@@ -2523,6 +2810,14 @@ Use yield to produce the next value in generator.
 In case of input data being supplied to the question, it should be assumed to be a console input.
 如果输入数据被提供给问题，则应假设它是控制台输入。
 
+#本人答案
+def task(n):
+    for i in range(0, n + 1):
+        if i % 5 == 0 and i % 7 == 0:
+            yield i
+n = int(input("请输入一个整数: "))
+task_list = [str(num) for num in task(n)]
+print(",".join(task_list))
 Solution:
 
 def NumGenerator(n):
@@ -2545,17 +2840,18 @@ print ",".join(values)
 Question 70:
 问题：
 
-
 Please write assert statements to verify that every number in the list [2,4,6,8] is even.
 请写断言语句来验证列表[2,4,6,8]中的每个数字都是偶数。
-
-
 
 Hints:
 提示：
 Use "assert expression" to make assertion.
 使用“assert-expression”进行断言。
 
+# 本人答案
+list1=[2,4,6,8]
+for i in list1:
+    assert i%2==0, f"{i} is not an even number"
 
 Solution:
 
@@ -2578,12 +2874,10 @@ If the following string is given as input to the program:
 如果将以下字符串作为程序的输入：
 
 35+3
-35+3
 
 Then, the output of the program should be:
 那么，程序的输出应该是：
 
-38
 38
 
 Hints:
@@ -2591,8 +2885,12 @@ Hints:
 Use eval() to evaluate an expression.
 使用eval（）来计算表达式。
 
-Solution:
 
+# 本人答案
+s=eval(input("请输入一个数学表达式: "))
+print(s)
+
+Solution:
 expression = raw_input()
 print eval(expression)
 
@@ -2610,6 +2908,24 @@ Hints:
 Use if/elif to deal with conditions.
 使用if/eif处理条件。
 
+# 本人答案
+def search(n,tas):
+    tas.sort()
+    low = 0
+    high = len(tas) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if tas[mid] == n:
+            return mid
+        elif tas[mid] < n:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+li=[2,5,7,9,11,17,222]
+print (search(li,11))
+print (search(li,12))
 
 Solution:
 
@@ -2648,9 +2964,26 @@ Hints:
 Use if/elif to deal with conditions.
 使用if/eif处理条件。
 
+# 本人答案
+def search(n,tas):
+    tas.sort()
+    low = 0
+    high = len(tas) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if tas[mid] == n:
+            return mid
+        elif tas[mid] < n:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+li=[2,5,7,9,11,17,222]
+print (search(li,11))
+print (search(li,12))
 
 Solution:
-
 import math
 def bin_search(li, element):
     bottom = 0
@@ -2686,9 +3019,11 @@ Hints:
 Use random.random() to generate a random float in [0,1].
 使用random.random（）在[0,1]中生成随机浮点数。
 
+# 本人答案
+import random
+print (random.random()*100)
 
 Solution:
-
 import random
 print random.random()*100
 
@@ -2700,16 +3035,17 @@ Question 75:
 Please generate a random float where the value is between 5 and 95 using Python math module.
 请使用Python数学模块生成一个值在5到95之间的随机浮点数。
 
-
-
 Hints:
 提示：
+
 Use random.random() to generate a random float in [0,1].
 使用random.random（）在[0,1]中生成随机浮点数。
 
+# 本人答案
+import random
+print (random.random()*90 + 5)
 
 Solution:
-
 import random
 print random.random()*100-5
 
@@ -2722,14 +3058,15 @@ Question 76:
 Please write a program to output a random even number between 0 and 10 inclusive using random module and list comprehension.
 请使用随机模块和列表理解编写一个程序，输出0到10之间的随机偶数。
 
-
-
 Hints:
 提示：
+
 Use random.choice() to a random element from a list.
 对列表中的随机元素使用random.choice（）。
 
-
+#本人答案
+import random
+print (random.choice([i for i in range(0,11) if i%2==0]))
 
 Solution:
 
@@ -2744,20 +3081,19 @@ Question 77:
 Please write a program to output a random number, which is divisible by 5 and 7, between 0 and 10 inclusive using random module and list comprehension.
 请使用随机模块和列表推导式编写一个程序来输出一个可被5和7整除的随机数，该随机数介于0和10之间。
 
-
-
 Hints:
 提示：
 Use random.choice() to a random element from a list.
 对列表中的随机元素使用random.choice（）。
 
+# 本人答案
+import random
+print (random.choice([i for i in range(0,11) if i%5==0 and i%7==0]))
 
 Solution:
 
 import random
 print random.choice([i for i in range(201) if i%5==0 and i%7==0])
-
-
 
 #----------------------------------------#
 #----------------------------------------#
@@ -2768,14 +3104,14 @@ Question 78:
 Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.
 请编写一个程序，生成一个包含100到200之间的5个随机数的列表。
 
-
-
 Hints:
 提示：
 Use random.sample() to generate a list of random values.
 使用random.sample（）生成随机值列表。
 
-
+# 本人答案
+import random
+print (random.sample(range(100,201),5))
 
 Solution:
 
@@ -2790,19 +3126,18 @@ Question 79:
 Please write a program to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
 请编写一个程序，随机生成一个包含5个介于100和200之间的偶数的列表。
 
-
-
 Hints:
 提示：
 Use random.sample() to generate a list of random values.
 使用random.sample（）生成随机值列表。
 
+# 本人答案
+import random
+print (random.sample([i for i in range(100,201) if i%2==0],5))
 
 Solution:
-
 import random
 print random.sample([i for i in range(100,201) if i%2==0], 5)
-
 
 #----------------------------------------#
 #----------------------------------------#
@@ -2812,13 +3147,14 @@ Question 80:
 Please write a program to randomly generate a list with 5 numbers, which are divisible by 5 and 7 , between 1 and 1000 inclusive.
 请编写一个程序，随机生成一个包含5个数字的列表，这些数字可以被5和7整除，介于1和1000之间。
 
-
-
 Hints:
 提示：
 Use random.sample() to generate a list of random values.
 使用random.sample（）生成随机值列表。
 
+# 本人答案
+import random
+print (random.sample([i for i in range(1,1001) if i%5==0 and i%7==0],5))
 
 Solution:
 
@@ -2834,13 +3170,14 @@ Question 81:
 Please write a program to randomly print a integer number between 7 and 15 inclusive.
 请编写一个程序，随机打印一个介于7和15之间的整数。
 
-
-
 Hints:
 提示：
 Use random.randrange() to a random integer in a given range.
 使用random.randrange（）对给定范围内的随机整数进行处理。
 
+# 本人答案
+import random
+print(random.randrange(7, 16))
 
 Solution:
 
@@ -2856,16 +3193,20 @@ Question 82:
 Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".
 请编写一个程序来压缩和解压缩字符串“hello world！hello world！hello world！hello world！”。
 
-
-
 Hints:
 提示：
 Use zlib.compress() and zlib.decompress() to compress and decompress a string.
 使用zlib.compress（）和zlib.dexport（）来压缩和解压缩字符串。
 
+# 本人答案
+import zlib
+s = b"hello world!hello world!hello world!hello world!"
+s = zlib.compress(s)
+print(s)
+s = zlib.decompress(s)
+print(s)
 
 Solution:
-
 import zlib
 s = 'hello world!hello world!hello world!hello world!'
 t = zlib.compress(s)
@@ -2880,12 +3221,16 @@ Question 83:
 Please write a program to print the running time of execution of "1+1" for 100 times.
 请编写一个程序，打印100次“1+1”执行的运行时间。
 
-
-
 Hints:
 提示：
 Use timeit() function to measure the running time.
 使用timeit（）函数测量运行时间。
+
+# 本人答案
+import timeit
+def test():
+    return 1 + 1
+print(timeit.timeit(test, number=100))
 
 Solution:
 
@@ -2901,15 +3246,19 @@ Question 84:
 Please write a program to shuffle and print the list [3,6,7,8].
 请编写一个程序来洗牌并打印列表[3,6,7,8]。
 
-
-
 Hints:
 提示：
 Use shuffle() function to shuffle a list.
 使用shuffle（）函数对列表进行洗牌。
 
-Solution:
+# 本人答案
+import random
+def shuffle_list(lst):
+    random.shuffle(lst)
+    return lst
+print(shuffle_list([3, 6, 7, 8]))
 
+Solution:
 from random import shuffle
 li = [3,6,7,8]
 shuffle(li)
@@ -2923,15 +3272,19 @@ Question 85:
 Please write a program to shuffle and print the list [3,6,7,8].
 请编写一个程序来洗牌并打印列表[3,6,7,8]。
 
-
-
 Hints:
 提示：
 Use shuffle() function to shuffle a list.
 使用shuffle（）函数对列表进行洗牌。
 
-Solution:
+# 本人答案
+import random
+def shuffle_list(lst):
+    random.shuffle(lst)
+    return lst
+print(shuffle_list([3, 6, 7, 8]))
 
+Solution:
 from random import shuffle
 li = [3,6,7,8]
 shuffle(li)
@@ -2952,8 +3305,16 @@ Hints:
 Use list[index] notation to get a element from a list.
 使用list[index]表示法从列表中获取元素。
 
-Solution:
+# 本人答案
+subjects = ["I", "You"]
+verbs = ["Play", "Love"]
+objects = ["Hockey", "Football"]
+for subject in subjects:
+    for verb in verbs:
+        for obj in objects:
+            print(f"{subject} {verb} {obj}")
 
+Solution:
 subjects=["I", "You"]
 verbs=["Play", "Love"]
 objects=["Hockey","Football"]
@@ -2976,8 +3337,12 @@ Hints:
 Use list comprehension to delete a bunch of element from a list.
 使用列表理解从列表中删除一堆元素。
 
-Solution:
+# 本人答案
+def remove_even_numbers(lst):
+    return [x for x in lst if x % 2 != 0]
+print(remove_even_numbers([5, 6, 77, 45, 22, 12, 24]))
 
+Solution:
 li = [5,6,77,45,22,12,24]
 li = [x for x in li if x%2!=0]
 print li
@@ -2995,11 +3360,12 @@ Hints:
 Use list comprehension to delete a bunch of element from a list.
 使用列表理解从列表中删除一堆元素。
 
-Solution:
-解决方案：
+# 本人答案
+def remove_divisible_by_5_and_7(lst):
+    return [x for x in lst if x % 5 != 0 and x % 7 != 0]
+print(remove_divisible_by_5_and_7([12, 24, 35, 70, 88, 120, 155]))
 
 Solution:
-
 li = [12,24,35,70,88,120,155]
 li = [x for x in li if x%5!=0 and x%7!=0]
 print li
@@ -3021,8 +3387,13 @@ Use list comprehension to delete a bunch of element from a list.
 Use enumerate() to get (index, value) tuple.
 使用enumerate（）来获取（索引，值）元组。
 
-Solution:
+# 本人答案
+def remove_indices(lst, indices):
+    return [x for i, x in enumerate(lst) if i not in indices]
+print(remove_indices([12, 24, 35, 70, 88, 120, 155], {0, 2, 4, 6}))
 
+
+Solution:
 li = [12,24,35,70,88,120,155]
 li = [x for (i,x) in enumerate(li) if i%2!=0]
 print li
@@ -3041,8 +3412,12 @@ Hints:
 Use list comprehension to make an array.
 使用列表推导式来创建数组。
 
-Solution:
+# 本人答案
+def generate_3d_array(dim1, dim2, dim3):
+    return [[[0 for _ in range(dim3)] for _ in range(dim2)] for _ in range(dim1)]
+print(generate_3d_array(3, 5, 8))
 
+Solution:
 array = [[ [0 for col in range(8)] for col in range(5)] for row in range(3)]
 print array
 
@@ -3062,8 +3437,12 @@ Use list comprehension to delete a bunch of element from a list.
 Use enumerate() to get (index, value) tuple.
 使用enumerate（）来获取（索引，值）元组。
 
-Solution:
+# 本人答案
+def remove_indices(lst, indices):
+    return [x for i, x in enumerate(lst) if i not in indices]
+print(remove_indices([12, 24, 35, 70, 88, 120, 155], {0, 4, 5}))
 
+Solution:
 li = [12,24,35,70,88,120,155]
 li = [x for (i,x) in enumerate(li) if i not in (0,4,5)]
 print li
@@ -3082,8 +3461,12 @@ Hints:
 Use list's remove method to delete a value.
 使用list的remove方法删除值。
 
-Solution:
+# 本人答案
+def remove_value(lst, value):
+    return [x for x in lst if x != value]
+print(remove_value([12, 24, 35, 24, 88, 120, 155], 24))
 
+Solution:
 li = [12,24,35,24,88,120,155]
 li = [x for x in li if x!=24]
 print li
@@ -3102,8 +3485,10 @@ Hints:
 Use set() and "&=" to do set intersection operation.
 使用set（）和“&=”执行set交集操作。
 
-Solution:
-解决方案：
+# 本人答案
+def intersection(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+print(intersection([1, 3, 6, 78, 35, 55], [12, 24, 35, 24, 88, 120, 155]))
 
 Solution:
 
@@ -3124,8 +3509,18 @@ Hints:
 Use set() to store a number of values without duplicate.
 使用set（）存储多个不重复的值。
 
-Solution:
+def remove_duplicates(lst):
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result    
+    
+print(remove_duplicates([12, 24, 35, 24, 88, 120, 155, 88, 120, 155]))
 
+Solution:
 def removeDuplicate( li ):
     newli=[]
     seen = set()
@@ -3133,7 +3528,6 @@ def removeDuplicate( li ):
         if item not in seen:
             seen.add( item )
             newli.append(item)
-
     return newli
 
 li=[12,24,35,24,88,120,155,88,120,155]
@@ -3152,8 +3546,18 @@ Hints:
 Use Subclass(Parentclass) to define a child class.
 使用子类（父类）定义子类。
 
-Solution:
+# 本人答案
+class Person:
+    def getGender(self):
+        pass
+class male(Person):
+    def getGender(self):
+        print("Male")
+class female(Person):
+    def getGender(self):
+        print("Female")
 
+Solution:
 class Person(object):
     def getGender( self ):
         return "Unknown"
@@ -3185,7 +3589,6 @@ If the following string is given as input to the program:
 如果将以下字符串作为程序的输入：
 
 abcdefgabc
-abcdefgabc
 
 Then, the output of the program should be:
 那么，程序的输出应该是：
@@ -3207,8 +3610,16 @@ Use dict to store key/value pairs.
 Use dict.get() method to lookup a key with default value.
 使用dict.get（）方法查找具有默认值的键。
 
-Solution:
+# 本人答案
+def count_characters(s):
+    char_count = {}
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+    return char_count
+s="abcdefgabc"
+print(count_characters(s))
 
+Solution:
 dic = {}
 s=raw_input()
 for s in s:
@@ -3243,6 +3654,13 @@ Hints:
 Use list[::-1] to iterate a list in a reverse order.
 使用list[：：-1]以相反的顺序迭代列表。
 
+# 本人答案
+def reverse_string(s):
+    return s[::-1]
+
+s = "rise to vote sir"
+print(reverse_string(s))
+
 Solution:
 
 s=raw_input()
@@ -3275,10 +3693,15 @@ Hints:
 提示：
 
 Use list[::2] to iterate a list by step 2.
-使用list[：：2]按步骤2迭代列表。
+使用list[：：2]按步数为2迭代列表。
+
+# 本人答案
+def even_index_characters(s):
+    return s[::2]
+s = "H1e2l3l4o5w6o7r8l9d"
+print(even_index_characters(s))
 
 Solution:
-
 s=raw_input()
 s = s[::2]
 print s
@@ -3298,8 +3721,14 @@ Hints:
 Use itertools.permutations() to get permutations of list.
 使用itertools.permutations（）来获取列表的排列。
 
-Solution:
+# 本人答案
+import itertools
+def print_permutations(lst):
+    return list(itertools.permutations(lst))
+lst = [1, 2, 3]
+print(print_permutations(lst))
 
+Solution:
 import itertools
 print list(itertools.permutations([1,2,3]))
 
@@ -3320,8 +3749,21 @@ Hint:
 Use for loop to iterate all possible solutions.
 使用for循环迭代所有可能的解决方案。
 
-Solution:
+# 本人答案
+def solve_chickens_and_rabbits(total_heads, total_legs):
+    for chickens in range(total_heads + 1):
+        rabbits = total_heads - chickens
+        if 2 * chickens + 4 * rabbits == total_legs:
+            return chickens, rabbits
+    return None
+total_heads = 35
+total_legs = 94
+solution = solve_chickens_and_rabbits(total_heads, total_legs)
+if solution:
+    chickens, rabbits = solution
+    print(f"Chickens: {chickens}, Rabbits: {rabbits}")
 
+Solution:
 def solve(numheads,numlegs):
     ns='No solutions!'
     for i in range(numheads+1):
@@ -3334,7 +3776,6 @@ numheads=35
 numlegs=94
 solutions=solve(numheads,numlegs)
 print solutions
-
 
 #----------------------------------------#
 #----------------------------------------#
